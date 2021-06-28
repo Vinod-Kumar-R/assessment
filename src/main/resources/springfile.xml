@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd"
+        >
+
+    <context:annotation-config />
+    <context:property-placeholder location= "file:${automation}/properties/mail.properties,
+    file:${automation}/properties/config.properties,
+    file:${automation}/properties/jira.properties"
+    />
+
+    
+    <bean id="mailBean" class="com.automation.beanclass.ExtentReportBean"></bean>
+    <bean id="mailconfiguration" class="com.automation.configuration.MailConfiguration"></bean>
+    <bean id="mailconent" class="com.automation.mail.MailContent"></bean>
+    <bean id="properties" class="com.automation.configuration.PropertiesValue"></bean>
+    <bean id="storedvalue" class="com.automation.configuration.ApplicationStoreValue"></bean>
+    <bean id="testdata" class="com.automation.utility.ExcelReader"></bean>
+    <bean id="createtestcase" class="com.automation.utility.ExcelReader"></bean>
+    <bean id="constantvariable" class="com.automation.configuration.ConstantVariable"></bean>
+    <bean id="base" class="com.automation.baseframework.BaseClass"></bean>
+    <bean id="keyword" class="com.automation.baseframework.KeywordExecution"></bean>
+    <bean id="repository" class="com.automation.beanclass.RepositoryBean"></bean>
+    <bean id="configure" class="com.automation.configuration.ConfigurationReader"></bean>
+    <bean id="customwait" class="com.automation.custom.wait.CustomWait"></bean>
+    <bean id="report" class="com.automation.utility.ExtentReport" ></bean>
+    <bean id="generic" class="com.automation.utility.GenericMethod"></bean>
+    <bean id="wait" class="com.automation.utility.WaitMethod"></bean>
+    <bean id="browser" class="com.automation.webdriver.BrowserInitialize"></bean>
+    <bean id="desi" class="com.automation.webdriver.Desired"></bean>
+    <bean id="lister" class="com.automation.webdriver.EventListener"></bean>
+    <bean id="mailService" class="com.automation.mail.MailServiceImpl"></bean>
+    <bean id="jiraauthentication" class="com.automation.jira.Authentication"></bean>
+    <bean id="jiraconfig" class="com.automation.configuration.JiraConfiguration"></bean>
+    <bean id="jiratestcase" class="com.automation.jira.zephyr.api.TestCaseapi"></bean>
+    <bean id="requsetbuilder" class="com.automation.jira.RequestBuilder"></bean>
+    <bean id="jiraresult" class="com.automation.jira.zephyr.api.AutomationResultapi"></bean>
+    <bean id="generalwait" class="com.automation.utility.GeneralWait"></bean>
+    <bean id="facebook" class="com.automation.facebook.Facebook"></bean>
+    <bean id="wallethub" class="com.automation.wallethub.insurance.WalletHub"></bean>
+    <bean id="reveiwfeed" class="com.automation.custom.webelement.ReveiwFeed"></bean>
+          
+</beans>
