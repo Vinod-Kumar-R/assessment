@@ -73,11 +73,16 @@ public class WalletHub {
 
     logger.debug("wait for Review Star element");
     waitmethod.waitForElementPresent("walletthub_ratingstart");
+    
+    
     List<WebElement> elements = genericmethod.getElements("walletthub_ratingstart");
     
     // initialize i to 1 to mouse over 
     int i = 1;
     for (WebElement element : elements) {
+      
+      logger.debug("scroll to view the star");
+      genericmethod.scrolltoelementBottom(element);
       
       if (i < Integer.valueOf(dataParam.get(0))) {
         

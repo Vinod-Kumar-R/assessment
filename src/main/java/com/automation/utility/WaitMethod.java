@@ -367,7 +367,7 @@ public class WaitMethod {
   /**
    * This is method is used to wait unit the mat row table are less than given number.
    * @param numberofRowLessThan is integer number, which contain the number row should be less than 
-   * @return
+   * @return "pass"
    */
   public String waitForMatTableUpadate(int numberofRowLessThan) {
     

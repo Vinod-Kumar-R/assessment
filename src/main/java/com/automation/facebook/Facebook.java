@@ -29,7 +29,7 @@ public class Facebook {
   /**
    * Method is used to login for facebook page.
    * @param dataParam contain username and password
-   * @return 
+   * @return "pass" after login to facebook page.
    */
   public String login(List<String> dataParam) {
     logger.debug("Opening the URL " + properties.getFacebookUrl());

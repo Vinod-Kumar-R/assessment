@@ -123,9 +123,9 @@ public class BaseClass {
   }
 
   /**
-   * This method read the test data excel file row by row and execute the test case.
-   * 
-   */
+  * This method read the test data excel file row by row and execute the test case.
+  * @param testfile is an excel file which contain all the test case id for execution
+  */
   private void executetestcase(String testfile) {
     int testDatarownumber = 0;
 
@@ -186,6 +186,7 @@ public class BaseClass {
    * and  column contain text as "END"
    * @param rowStartfrom This parameter take the integer number ,
    *     which indicate from which row test script has to executed
+   * @param testdatafile is a script file which contain the keyword to executed it.
    */
 
   private void testRunId(int rowStartfrom, String testdatafile) {
